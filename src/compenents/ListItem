@@ -1,0 +1,14 @@
+import React from 'react';
+
+function ListItem(props) {
+    const [check, setCheck] = React.useState(false);
+
+    return (
+        <div>
+            <button onClick={() => setCheck(!check)}>{props.name}</button>
+            <h3>{check ? 'Completed' : 'Not Completed'}</h3>
+        </div>
+    );
+}
+
+export default ListItem;
